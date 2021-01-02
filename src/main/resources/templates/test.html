@@ -14,13 +14,15 @@
 <input type="button" @click="searchKey" value="搜索">
     <hr/>
     <p>{{keyword}}</p>
-
     <hr/>
+
     <p v-for="item in arr">
 
-        图片 :{{item.img}}
+        图片 :{{"http://pic.netbian.com"+item.img}}
         名称 :{{item.name}}
+        <img :src="'http://pic.netbian.com'+item.img">
     </p>
+
     <hr/>
 </div>
 <script>
