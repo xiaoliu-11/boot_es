@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<body>
+<div id="app">
+  <input type="text" v-model="keyword">
+<input type="button" @click="searchKey">
+    <hr/>
+    <p>{{keyword}}</p>
+
+    <ul>
+        <li></li>
+    </ul>
+
+</div>
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            keyword: '',      //搜索的关键字
+            results :[]      //搜索的结果
+
+        },
+    methods: {
+        searchKey: function (){
+              var keyword = this.keyword;
+              console.log(keyword);
+        }
+
+    }
+
+    })
+
+</script>
+
+</body>
+</html>
