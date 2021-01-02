@@ -17,9 +17,8 @@
     <hr/>
 
     <p v-for="item in arr">
-
         图片 :{{"http://pic.netbian.com"+item.img}}
-        名称 :{{item.name}}
+        <a v-html="item.name"></a>
         <img :src="'http://pic.netbian.com'+item.img">
     </p>
 
@@ -37,7 +36,7 @@
               var keyword = this.keyword;
               console.log(keyword);
                //对接后端的接口
-            axios.get("search/"+keyword+"/1/10").then
+            axios.get("search/"+keyword+"/1/20").then
             (response=>{
                 console.log(response);
                 //赋值给result

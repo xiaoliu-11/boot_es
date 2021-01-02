@@ -39,7 +39,7 @@ public class TupianController {
 
     ) throws IOException {
 
- return tupianService.searchPage(keyword,pageNo,pageSize);
+ return tupianService.searchPageHighlightBuilder(keyword,pageNo,pageSize);
 
    }
 
